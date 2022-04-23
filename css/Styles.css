@@ -1,7 +1,7 @@
 *{
     margin-top: 0;
-    margin-right:5px;
-    margin-left:5px;
+    margin-right:10px;
+    margin-left:10px;
     margin-bottom: 0px;
     padding: 0;
     
@@ -9,17 +9,48 @@
 
 header { 
     background: #4d4d4da2;
-    text-align: center;
     display: grid;
     position: fixed;
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     height: 25%;
-   
+    margin-left: 0%;  
+    grid-template-columns: 1fr;
+    align-content: center;
    
 }
-#menu{
-   /* display: grid;*/
-    float: left;
+.header{
+    display: grid;
+    grid-template-columns: 0fr 3fr 0fr;
+}
+.card1{
+    text-align: center;
+    margin:0%;    
+    height: fit-content;
+}
+h1{
+    text-align:center;
+    margin: 0%;
+}
+
+.fa-solid{
+    margin:0%;  
+    height: fit-content;
+    font-size:x-large;
+    cursor: pointer;     
+}
+
+
+#boton {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    width: 70px;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+   }
+
+
+.menu{
     width: 0px;
     height: 100%;
     position: fixed;
@@ -29,19 +60,41 @@ header {
     font-size: 20px;
     text-align: left;
     padding-top: 20px;
+    transition: 150ms;
+    z-index: 200;
+    overflow: hidden;
     /*grid-template-rows:0.1fr 0.1fr 0.1fr  ;
-    /*overflow:hidden;
+    overflow:hidden;
     transition: 250ms;
     /*z-index: 200;
-    /*overflow y width*/   
+    /*overflow y width*/ 
+       /*display: inline-block;*/
+    /*float: left;*/  
 }
+
+ul {
+    list-style-type: none;
+    margin: 0.1%;
+  }
+
+li{
+    padding: 20px;
+}
+.menu a{
+    font-weight: 100;
+    margin-left: 0%;
+}
+  .menu a:hover{
+      color:white;
+    
+  }
 
 /*clase para usar en Js*/
 .menu_side_move{
     overflow: visible;
-    width:350px;
-   /* padding: 0px;*/
-    border-radius: 10px;
+    width:320px;
+    border-radius: 20px;
+   
 }
     
 
@@ -50,38 +103,36 @@ section{
     width: 100%;
     background-color: #e32b2b8a;
     grid-template-columns: 1fr 1fr; 
+    margin-top: 1%;
+    margin-left: 0;
     
 }
-/*.row{
-    display: grid;
-    align-items: center!important;
-    
-      
-}*/
+
 
 .col-md {
     display: grid;
-    width: 100%;
+   /* width: 100%;*/
     align-items: center!important;
    
 }
 .col-md >img{  
-    width: 95%;
+    width: 100%;
+    height: 600px;
     margin-top: 1%;
-        
+    margin-left: 0;
+
+
+
 }
 
 .container2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    margin-top: 10%;
+    margin-top: 2%;
     /*background-color: rgba(0, 255, 255, 0.144);*/
 }
-/*.col2{
-    display:grid;
-    align-content: center;  
-}*/
+
 
 .card{
     display: grid;
@@ -125,9 +176,7 @@ figcaption{
 
 
 
-
-
-@media screen and (max-width:767px){
+@media only screen and (max-width:700px){
 section{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -140,5 +189,18 @@ section{
   
 }
 
+}
 
+@media only screen and (min-width:700px) and (max-width:900px){
+    section{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+       
+    }
+    .container2{
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: auto;
+      
+    }
 }
