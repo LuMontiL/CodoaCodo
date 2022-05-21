@@ -25,61 +25,49 @@
                 <ul class="accesos">
                     <li class= "breadcrumb-item"> <a href= "index.html"> Inicio </a> </li>
                     <li class= "breadcrumb-item"> <a href= "productos.html"> Productos </a> </li>
-                    <li class= "breadcrumb-item"> <a href= "registro.html"> Registro </a> </li>
+                    <li class= "breadcrumb-item"> <a href= "contacto.html"> Contacto </a> </li>
                 </ul>
             </div> 
 
-        <section class="registro-container">
-        <form class="registro">
-            <h1>Registro</h1>
+    <section class="contacto-container">
+        <form id="contacto">
+            <h1>Contacto</h1>
+            <select name="motivo" class="form-control" id="validationCustom01" required>
+                <option selected disabled value="">Elige un motivo</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Reclamo">Reclamo</option>
+                <option value="Pedido">Pedido</option>
+                <option value="Opinion">Opinión</option>
+                <option value="Opinion">Otro Asunto</option>
+            </select>  </td>
             <table>
-                <tr>
-                    <td>
-                        Nombre Usuario:
-                    </td>
-            
-                    <td>
-                        <input type="name"  placeholder=”Nombre” name=””>
-                    </td>
+                <tr id="nombre1">
+                   
+                    <td> <input type="name" class="dato"  placeholder=Nombre id="nombre" required></td>   
                 </tr>
-                <tr>
-                    <td>
-                        Fecha de Nacimiento:
-                    </td>
-            
-                    <td>
-                        <input type="date"  name="fecha">
-                    </td>
+
+                <tr id="mail1">
+                   
+                    <td> <input type="mail" class="dato"  placeholder=Email id="mail" required> </td>
                 </tr>
-                <tr>
-                    <td>
-                        Email:
-                    </td>
-            
-                    <td>
-                        <input type="mail"  placeholder=”Email” name=””>
-                    </td>
-                </tr>
-                 <tr>
-                    <td>
-                        Password:
-                    </td>
-            
-                     <td>
-                        <input type="Password" placeholder=”Contraseña” name=””>
-                    </td>
+                 <tr id="consulta1">
+                   
+                    <td><input type="text" class="dato" placeholder= "Escribe aqui to consulta" id="consulta" required></td>
                  </tr>
-                        
+                          
              </table>
-             <input type="button" value=Registrarme id="boton-registro">
+             <input type="checkbox" value="Terminos y Condiciones"  id="terminos"> Terminos y Condiciones
+             <input type="submit" value=Consultar id="boton-contacto">
+            
+            
+             <div id="advertencia"></div>
+
             </form> 
         </section>
 
-
-
-            <script src="js/codoacodo.js"></script>
-
-
+    <script src="js/codoacodo.js"></script>
+    <footer>
+    </footer>
 
     
 </body>
