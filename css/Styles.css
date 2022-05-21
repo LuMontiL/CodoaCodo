@@ -24,8 +24,10 @@ header {
     grid-template-rows: 0.5fr 1fr;
     grid-template-columns: 1fr;
     align-content: center;
+    z-index: 100;
     
 }
+
 
  /*clase para js
 .header-appear{
@@ -39,13 +41,14 @@ header {
     grid-template-columns: 0fr 3fr 0fr;
     color:aliceblue; 
 }
+
 .header-mini{
     text-align: center;
     width: 100%;
     margin-left: 0; 
 }
 
-h3{
+.header-mini >h3{
     background-color: #2a2929cc;
     color: aliceblue;
     width: 100%;
@@ -124,11 +127,12 @@ li{
 .menu_side_move{
     overflow: visible;
     width:320px;
-    border-radius: 20px;
+    border-radius: 10px;
+    
    
 }
     
-.container-main{
+/*.container-main{
     display: grid;
     width: 100%;
     grid-template-columns: 1fr;
@@ -147,7 +151,7 @@ li{
     margin-right: 0;
     margin-left: 0;
     height: 90%;
-}
+}*/
 
 .container{
     display:grid;
@@ -156,6 +160,7 @@ li{
     grid-template-columns: 1fr 1fr; 
     margin-left: 0;
     gap: 1%;   
+    /*margin-top: 170px;*/
 }
 
 
@@ -175,30 +180,54 @@ li{
 }
 .col-md >img:hover{
     opacity: 0.7;
+    
 }
-.col-md>.text-img{
+.col-md .text-img{
+    display: flex;
+    width: 45%;
+    margin:20px;
+    justify-content: center;
+    align-self: center;
     position: absolute;
-    color: black;
-    opacity: 1;
+    background-color: black;
+    color: rgb(255, 16, 16);
     visibility: hidden;
     font-size: xx-large; 
+    text-align: center;
+    z-index: 200;
+    
 }
 
-.col-md >img:hover>.text-img{
+.col-md:hover .text-img{
     visibility: visible;
-    /*z-index: 200;*/
-    opacity: 0;
+   /* opacity: 1; 
+    z-index: 200; 
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;  */
 }
 
 .container2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    margin-top: 2%;
+    margin-top: 15px;
     background-color: aqua;   
 }
 
-
+.titulo-seccion{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 70px;
+    padding: 10px;
+    position:static;
+    background-color: aliceblue;
+}
+.titulo-seccion>h2{
+    font-size: xx-large;
+    font-weight: 100;
+   
+}
 .card{
     display: grid;
     margin-top: 10px;
@@ -207,12 +236,19 @@ li{
     min-width: 50%;  
 }
 
-figure {
+figure{
     margin-top: 0px;
     background-color:rgb(255, 254, 241);
     padding:0px 0px 70px 0px;
     border:1px solid #BFBFBF;
     box-shadow:7px 7px 10px rgba(0, 0, 0, 0.8); 
+}
+figure:hover {
+    -webkit-transform:scale(1.02);
+    -moz-transform:scale(1.02);
+    -ms-transform:scale(1.02);
+    -o-transform:scale(1.02);
+    transform:scale(1.02);
 }
 figure > img{
     width:100%;
@@ -225,11 +261,6 @@ figure > img{
 }
 figure> img:hover{
     opacity: 0.7;
-    -webkit-transform:scale(1.02);
-    -moz-transform:scale(1.02);
-    -ms-transform:scale(1.02);
-    -o-transform:scale(1.02);
-    transform:scale(1.02);
 }
 
 
@@ -248,37 +279,118 @@ figcaption{
    padding-bottom: 10%;
 }
 /*REGISTRO- FLEXBOX*/
-.registro-container{
+.contacto-container{
     display:flex;
     justify-content: center;
-    height: 70%;
+    height: 60%;
     align-items: center;
     margin-top: 250px;
-    background-color:antiquewhite;
+   
     margin-right: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
 }
 
-/*.registro{
-    display: grid;
-    grid-template-areas: inherit;
-    margin-top: 50%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}*/
+#contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    background-color:aliceblue;
+    flex-direction:column;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    font-size: xx-large;
+    border-radius: 10px;
+}
+#boton-contacto{
+    cursor: pointer;
+    
+}
+
+#advertencia{
+    margin-top: 30px;
+    color: black;
+}
+
+.dato{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-right: 50px;
+    width: 100%;
+}
+#validationCustom01{
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#consulta{
+    height: 150px;
+}
+
+#terminos{
+    display: flex;
+    align-self: flex-start;
+    margin-top: 20px;
+    font-size: small;
+}
+#footerJs {
+    display: flex;
+    width: calc(100% + 1px);
+    margin-left: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    height: auto; 
+    flex-direction: column;
+}
+.footer-mini{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.foot-item{
+    display: flex;
+    margin: 10px;
+    
+}
+
+.footer2{
+    display: flex;
+    align-self: center;
+}
 
 
 
-@media only screen and (max-width:580px) {
-    section{
+
+@media only screen and (max-width:560px) {
+    .container{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         width: 100%;
+        /*margin-top: 170px;*/
        
     }
     .container2{
         grid-template-columns:  1fr;
         grid-template-rows: auto;
-        margin-left: 2px;
+       
       
     }
     .column{
@@ -292,30 +404,52 @@ figcaption{
        padding-bottom: 30%;
     }
 
-    .registro-container{
+    .contacto-container{
         display:flex;
         justify-content: center;
         height: 70%;
         align-items: center;
         margin-top: 250px;
-        background-color:rgb(152, 207, 22);
-        /*position:inherit;*/
+       
         margin-left: 2px;
+        flex-wrap: wrap;
+        
     }
+    #contacto{
+       margin-right:20px;
+    }
+    .col-md .text-img{
+        display: flex;
+        width: 80%;
+        margin-left: 25px;
+        justify-content: center;
+        align-self: center;
+        position: absolute;
+        background-color: black;
+        color: rgb(255, 16, 16);
+        visibility: hidden;
+        font-size: xx-large; 
+        text-align: center;
+        z-index: 200;
+        
+    }
+
+    
 
 }
 
-@media only screen and (min-width:580px) and (max-width:700px){
-section{
+@media only screen and (min-width:560px) and (max-width:740px){
+.container{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     width: 100%;
+   /* margin-top:170px;*/
    
 }
 .container2{
     grid-template-columns:  1fr;
     grid-template-rows: auto;
-    margin-left: 2px;
+    
   
 }
 .column{
@@ -328,31 +462,50 @@ section{
     /*margin-top: 35%;*/
     padding-bottom:20% ;
 }
-.registro-container{
+.contacto-container{
     display:flex;
     justify-content: center;
     height: 70%;
     align-items: center;
     margin-top: 250px;
-    background-color:rgb(207, 62, 22);
+  
     /*position:inherit;*/
     margin-left: 2px;
+    flex-wrap: wrap;
+  
 }
+.col-md .text-img{
+    display: flex;
+    width: 80%;
+    margin:8%;
+    justify-content: center;
+    align-self: center;
+    position: absolute;
+    background-color: black;
+    color: rgb(255, 16, 16);
+    visibility: hidden;
+    font-size: xx-large; 
+    text-align: center;
+    z-index: 200;
+    
+}
+
 
 }
 
-@media only screen and (min-width:700px) and (max-width:900px){
-    section{
+@media only screen and (min-width:740px) and (max-width:1200px){
+    .container{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         width: 100%;
+        /*margin-top: 170px;*/
        
     }
     .container2{
         grid-template-columns:  1fr 1fr;
         grid-template-rows: auto;
         margin-left: 2px;
-      
+  
     }
 
     .column{
@@ -366,16 +519,34 @@ section{
         /*margin-top: 30%;*/
         padding-bottom: 17%;
     }
-    .registro-container{
+    .contacto-container{
     display:flex;
     justify-content: center;
     height: 70%;
     align-items: center;
     margin-top: 250px;
-    background-color:rgb(207, 127, 22);
+
     /*position:inherit;*/
     margin-left: 2px;
+    flex-wrap: wrap;
+    
 }
+.col-md .text-img{
+    display: flex;
+    width: 80%;
+    margin:8%;
+    justify-content: center;
+    align-self: center;
+    position: absolute;
+    background-color: black;
+    color: rgb(255, 16, 16);
+    visibility: hidden;
+    font-size: xx-large; 
+    text-align: center;
+    z-index: 200;
+    
+}
+
 
 
 }
