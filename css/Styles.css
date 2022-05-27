@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Roboto+Condensed&display=swap');
+
 *{
     margin-top: 0;
     margin-right:10px;
     margin-left:10px;
     margin-bottom: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
     
 }
 
