@@ -34,10 +34,17 @@ function open_close_menu () {
 document.getElementById("footerJs").innerHTML = `
 
     <nav class="footer-mini">
+
     <ol class="foot">
-    <li class="foot-item"><a href="index.html">Inicio</a></li>
-    <li class="foot-item"><a href="productos.html">Productos</a></li>
-    <li class="foot-item"><a href="contacto.html">Contacto</a></li>
+    <li class="foot-item"><a href="index.html">INICIO</a></li>
+    <li class="foot-item"><a href="productos.html">PRODUCTOS</a></li>
+    <li class="foot-item"><a href="contacto.html">CONTACTO</a></li>
+    </ol>
+
+    <ol class="foot">
+    <li class="foot-item"><a href="index.html">Twitter</a></li>
+    <li class="foot-item"><a href="index.html">Facebook</a></li>
+    <li class="foot-item"><a href="index.html">Instagram</a></li>
     </ol>
     </nav>
     

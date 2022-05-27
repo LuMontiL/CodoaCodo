@@ -8,13 +8,13 @@
 
 body{
     display: grid;
-   
+    /*width: fit-content;*/
     
 }
 
 
 header { 
-    background-color: black;
+    background-color: #070300;
     display: grid;
     position: fixed;
     width: calc(100% - 40px);
@@ -156,7 +156,7 @@ li{
 .container{
     display:grid;
     width: 100%;
-    background-color: #fff8bc;
+    background-color: #ebd5bd;
     grid-template-columns: 1fr 1fr; 
     margin-left: 0;
     gap: 1%;   
@@ -190,7 +190,7 @@ li{
     align-self: center;
     position: absolute;
     background-color: black;
-    color: rgb(255, 16, 16);
+    color: #b77a37;
     visibility: hidden;
     font-size: xx-large; 
     text-align: center;
@@ -211,7 +211,7 @@ li{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     margin-top: 15px;
-    background-color: aqua;   
+    background-color: #ebd5bd;   
 }
 
 .titulo-seccion{
@@ -221,7 +221,8 @@ li{
     margin: 70px;
     padding: 10px;
     position:static;
-    background-color: aliceblue;
+    background-color: #d9a069;
+    border-radius: 5px;
 }
 .titulo-seccion>h2{
     font-size: xx-large;
@@ -237,11 +238,13 @@ li{
 }
 
 figure{
+    display: flex;
     margin-top: 0px;
     background-color:rgb(255, 254, 241);
-    padding:0px 0px 70px 0px;
+    padding:0px 0px 30px 0px;
     border:1px solid #BFBFBF;
     box-shadow:7px 7px 10px rgba(0, 0, 0, 0.8); 
+    flex-direction: column;
 }
 figure:hover {
     -webkit-transform:scale(1.02);
@@ -268,8 +271,22 @@ figcaption{
     text-align: center;
     margin-top: 25px;
     font-size: 30px;
-    background-color: aqua;
+   
   
+}
+
+#btn{
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+    border-color: #ffffff00;
+    background-color:#ebd5bd;
+    border-radius: 10px;
+}
+#btn:hover{
+    border-color: #1a1a1aed;
+    cursor: pointer;
 }
 
 /*PRODUCTOS- GRID*/
@@ -282,12 +299,11 @@ figcaption{
 .contacto-container{
     display:flex;
     justify-content: center;
-    height: 60%;
+    height: 70%;
     align-items: center;
-    margin-top: 250px;
-   
-    margin-right: 10px;
-    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 2px;
     flex-wrap: wrap;
     
 }
@@ -297,22 +313,24 @@ figcaption{
     justify-content: center;
     align-items: center;
     width: 500px;
-    background-color:aliceblue;
+    background-color:#ebd5bd;
     flex-direction:column;
     flex-wrap: wrap;
     row-gap: 5px;
     font-size: xx-large;
     border-radius: 10px;
+    border: 1px solid rgba(57, 57, 57, 0.955);
+    box-shadow:7px 7px 10px rgba(0, 0, 0, 0.8); ;
 }
 #boton-contacto{
     cursor: pointer;
     
 }
 
-#advertencia{
+/*#advertencia{
     margin-top: 30px;
     color: black;
-}
+}*/
 
 .dato{
     display: flex;
@@ -342,7 +360,7 @@ figcaption{
     display: flex;
     width: calc(100% + 1px);
     margin-left: 0;
-    background-color: black;
+    background-color: #070300;
     color: white;
     text-align: center;
     font-size: 12px;
@@ -355,12 +373,12 @@ figcaption{
     width: 100%;
     margin: 0;
     padding: 0;
+    flex-direction: column
 
 }
 .foot{
     display: flex;
     justify-content: center;
-    align-items: stretch;
     padding: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -409,9 +427,10 @@ figcaption{
         justify-content: center;
         height: 70%;
         align-items: center;
-        margin-top: 250px;
-       
+        margin-top: 30%;
+        margin-bottom: 30%;
         margin-left: 2px;
+
         flex-wrap: wrap;
         
     }
@@ -426,13 +445,20 @@ figcaption{
         align-self: center;
         position: absolute;
         background-color: black;
-        color: rgb(255, 16, 16);
+        color: #b77a37;
         visibility: hidden;
         font-size: xx-large; 
         text-align: center;
         z-index: 200;
         
     }
+
+
+    .foot{
+        flex-direction: column;
+        align-items: center;
+        
+     }
 
     
 
@@ -464,14 +490,13 @@ figcaption{
 }
 .contacto-container{
     display:flex;
-    justify-content: center;
-    height: 70%;
-    align-items: center;
-    margin-top: 250px;
-  
-    /*position:inherit;*/
-    margin-left: 2px;
-    flex-wrap: wrap;
+        justify-content: center;
+        height: 70%;
+        align-items: center;
+        margin-top: 30%;
+        margin-bottom: 30%;
+        margin-left: 2px;
+        flex-wrap: wrap;
   
 }
 .col-md .text-img{
@@ -482,13 +507,17 @@ figcaption{
     align-self: center;
     position: absolute;
     background-color: black;
-    color: rgb(255, 16, 16);
+    color: #b77a37;
     visibility: hidden;
     font-size: xx-large; 
     text-align: center;
     z-index: 200;
     
 }
+.foot{
+    flex-direction: column;
+    align-items: center;
+ }
 
 
 }
@@ -520,15 +549,14 @@ figcaption{
         padding-bottom: 17%;
     }
     .contacto-container{
-    display:flex;
-    justify-content: center;
-    height: 70%;
-    align-items: center;
-    margin-top: 250px;
-
-    /*position:inherit;*/
-    margin-left: 2px;
-    flex-wrap: wrap;
+        display:flex;
+        justify-content: center;
+        height: 70%;
+        align-items: center;
+        margin-top: 20%;
+        margin-bottom: 30%;
+        margin-left: 2px;
+        flex-wrap: wrap;
     
 }
 .col-md .text-img{
@@ -539,12 +567,17 @@ figcaption{
     align-self: center;
     position: absolute;
     background-color: black;
-    color: rgb(255, 16, 16);
+    color: #b77a37;
     visibility: hidden;
     font-size: xx-large; 
     text-align: center;
     z-index: 200;
     
+}
+
+.foot{
+   flex-direction: column;
+   align-items: center;
 }
 
 
