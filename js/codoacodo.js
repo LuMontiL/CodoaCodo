@@ -34,17 +34,18 @@ function open_close_menu () {
 document.getElementById("footerJs").innerHTML = `
 
     <nav class="footer-mini">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7929460983123!2d-64.19037088530621!3d-31.41983030356158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a32dcf5d747f%3A0x40373220b29140ac!2sPatio%20Olmos%20Shopping!5e0!3m2!1ses-419!2sar!4v1656623078862!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
 
     <ol class="foot">
-    <li class="foot-item"><a href="index.html">INICIO</a></li>
-    <li class="foot-item"><a href="productos.html">PRODUCTOS</a></li>
-    <li class="foot-item"><a href="contacto.html">CONTACTO</a></li>
+    <li class="foot-item"><a href="index.html"><i class="fa-brands fa-facebook"></i></a></li>
+    <li class="foot-item"><a href="productos.html"><i class="fa-brands fa-instagram"></i></a></li>
+    <li class="foot-item"><a href="contacto.html"><i class="fa-brands fa-twitter"></i></a></li>
     </ol>
 
     <ol class="foot">
-    <li class="foot-item"><a href="index.html">Twitter</a></li>
-    <li class="foot-item"><a href="index.html">Facebook</a></li>
-    <li class="foot-item"><a href="index.html">Instagram</a></li>
+    <li class="foot-item"><a class="link" href="index.html">Inicio</a></li>
+    <li class="foot-item"><a class="link" href="productos.html">Productos</a></li>
+    <li class="foot-item"><a class="link" href="contacto.html">Contacto</a></li>
     </ol>
     </nav>
     
